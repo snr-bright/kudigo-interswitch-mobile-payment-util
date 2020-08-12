@@ -1,2 +1,3 @@
+include ':InterswitchPaymentLibrary'
 include ':app'
 rootProject.name = "Interswitch Integration"

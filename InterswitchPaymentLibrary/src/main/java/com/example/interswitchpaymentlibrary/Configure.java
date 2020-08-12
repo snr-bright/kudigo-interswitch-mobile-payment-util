@@ -1,4 +1,4 @@
-package com.example.interswitchintegration;
+package com.example.interswitchpaymentlibrary;
 
 import android.app.Application;
 

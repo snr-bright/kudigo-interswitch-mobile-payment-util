@@ -1,11 +1,11 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
     buildToolsVersion '28.0.3'
 
     defaultConfig {
-       // applicationId "com.interswitchng.mobilesdk"
+        applicationId "com.interswitchng.mobilesdk"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode versionCode
@@ -29,20 +29,13 @@ android {
 }
 
 dependencies {
+    implementation project(':InterswitchPaymentLibrary')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.activity:activity:1.2.0-alpha03'
 
     implementation 'androidx.fragment:fragment:1.3.0-alpha06'
-
-    // payment sdk
-    def versionName = '1.0.0'
-    implementation "com.interswitchng:isw-mobile-payment-sdk:$versionName"
-    implementation 'androidx.multidex:multidex:2.0.1'
-
-    // for devices below android lollipop
-    //implementation 'com.google.android.gms:play-services-auth:16.0.1'
 
 
     testImplementation 'junit:junit:4.12'
